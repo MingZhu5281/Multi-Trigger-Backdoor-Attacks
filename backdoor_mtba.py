@@ -32,7 +32,7 @@ import sys
 
 sys.path.append("..")
 # sys.path.append('/home/iyc1sgh/jupyter_notebook/Multi-Backdoor-Attacks-main/Multi-Trigger-Backdoor') 
-os.chdir('/data/gpfs/projects/punim0619/yige/Multi-Trigger-Backdoor-Attacks')
+os.chdir('/content/Multi-Trigger-Backdoor-Attacks')
 
 def main(args):
     # args = get_arguments().parse_args()
@@ -81,8 +81,8 @@ def main(args):
             transforms.Normalize(MEAN_CIFAR10, STD_CIFAR10)
         ])
 
-        clean_train = CIFAR10(root='/data/gpfs/projects/punim0619/datasets', train=True, download=True, transform=None)
-        clean_test = CIFAR10(root='/data/gpfs/projects/punim0619/datasets', train=False, download=True, transform=None)
+        clean_train = CIFAR10(root='./data', train=True, download=True, transform=None)
+        clean_test = CIFAR10(root='./data', train=False, download=True, transform=None)
 
         
         if args.attack_type == 'single_trigger': 
@@ -359,8 +359,8 @@ def main(args):
             transforms.Normalize(MEAN_CIFAR10, STD_CIFAR10)
         ])
 
-        clean_train = CIFAR100(root='/data/gpfs/projects/punim0619/datasets', train=True, download=True, transform=None)
-        clean_test = CIFAR100(root='/data/gpfs/projects/punim0619/datasets', train=False, download=True, transform=None)
+        clean_train = CIFAR100(root='./data', train=True, download=True, transform=None)
+        clean_test = CIFAR100(root='./data', train=False, download=True, transform=None)
 
         trigger_pools = ['onePixelTrigger', 'gridTrigger', 'fourCornerTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger',
                     'smoothTrigger', 'dynamicTrigger', 'nashvilleTrigger']
