@@ -15,7 +15,7 @@ sys.path.append("..")
 
 from model_for_cifar import dynamic_models
 
-sys.path.append('/data/gpfs/projects/punim0619/yige/Multi-Trigger-Backdoor-Attacks/trigger') 
+sys.path.append('/content/Multi-Trigger-Backdoor-Attacks/trigger') 
 
 
 if torch.cuda.is_available():
